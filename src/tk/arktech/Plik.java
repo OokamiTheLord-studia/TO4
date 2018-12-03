@@ -1,26 +1,28 @@
 package tk.arktech;
 
-public class Plik extends FileInterface implements IPlik {
-    //TODO: Zastanowić się jakiego typu
-    private String content;
+import java.util.ArrayList;
 
-    public String getContent() {
-        //TODO: Dodać implementację
+public class Plik extends FileInterface{
+    private Object content;
+
+
+    public Object getContent() {
         return content;
     }
 
-    public void setContent(String content) {
-        //TODO: Dodać implementację
+    public void setContent(Object content) {
         this.content = content;
     }
 
-    public Plik(String content) {
-        //TODO: Dodać implementację
+    public Plik(String name, Object content) {
         this.content = content;
+        super.name = name;
     }
 
-    public Plik() {
-        //TODO: Dodać implementację
-        this.content = "";
+    public Plik(String name) {
+        super.name = name;
+        this.content = null;
     }
+
+
 }
