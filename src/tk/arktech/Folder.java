@@ -18,6 +18,8 @@ public class Folder extends FileInterface {
 
     }
 
+
+
     public void addItem(FileInterface item)
     {
 
@@ -86,13 +88,31 @@ public class Folder extends FileInterface {
     public void ls()
     {
         itemList.forEach((k, v) ->
-            System.out.println(k) );
+        {
+            if(v instanceof Folder)
+            {
+                System.out.println("["+k+"]");
+            }
+            else
+            {
+                System.out.println(k);
+            }
+        } );
     }
 
     public void ls(String prompt)
     {
         itemList.forEach((k, v) ->
-                System.out.println(prompt+k) );
+        {
+            if(v instanceof Folder)
+            {
+                System.out.println("["+k+"]");
+            }
+            else
+            {
+                System.out.println(k);
+            }
+        } );
     }
 
     public void tree()

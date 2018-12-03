@@ -15,6 +15,13 @@ public class Main {
         ((Folder)((Folder) root.getItem("level1")).getItem("level2")).addItem(new Plik("plik3"));
 
         root.tree();
+        System.out.println();
+        root.addItem(((Folder) root.getItem("level1")).getItem("plik2"));
+        root.ls();
+        System.out.println();
+        ((ProxyPlik) root.getItem("plik2")).renameInAll("plik-1");
+
+        root.tree();
 
     }
 }

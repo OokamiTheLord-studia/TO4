@@ -34,6 +34,7 @@ public class ProxyPlik extends FileInterface{
 
                 fWhereami.itemList.remove(whereami.get(fWhereami));
                 fWhereami.itemList.put(newname, this);
+//                System.out.println("test");
             }
             whereami.replaceAll((k, v) -> newname);
             super.name = newname;
@@ -69,15 +70,15 @@ public class ProxyPlik extends FileInterface{
         plik.setContent(content);
     }
 
-    protected void addLocation(Folder f, String name)
-    {
-        plik.whereami.put(f, name);
-    }
-
-    protected void removeLocation(Folder f)
-    {
-        plik.whereami.remove(f);
-    }
+//    protected void addLocation(Folder f, String name)
+//    {
+//        plik.whereami.put(f, name);
+//    }
+//
+//    protected void removeLocation(Folder f)
+//    {
+//        plik.whereami.remove(f);
+//    }
 
 
 
